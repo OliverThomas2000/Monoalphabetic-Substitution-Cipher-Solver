@@ -9,5 +9,7 @@ public class Solver {
         LinkedHashMap<Character,Integer> orderedFrequencies =  MapSortByValue.MapSortDescending(letterFrequency.charMap);
         Character[] mostCommon = orderedFrequencies.keySet().toArray(new Character[0]);
         System.out.println(mostCommon[0]);
+        //TODO store this 'e' in our cipher to plaintext map!
+        //TODO create a class that find three letter words ending in our 'e'
     }
 }
