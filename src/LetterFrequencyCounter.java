@@ -2,7 +2,6 @@ import java.util.*;
 
 public class LetterFrequencyCounter {
     Map<Character,Integer> charMap;
-    final String notAccepted = " .,\"';:%£$#[{}]/?!+=-_";
 
     LetterFrequencyCounter() {
         this.charMap = new HashMap<>();
@@ -12,7 +11,7 @@ public class LetterFrequencyCounter {
         for (int index = 0; index < input.length(); index++) {
             char c = input.charAt(index);
             Integer currentCount = charMap.get(c);
-            if (!notAccepted.contains(String.valueOf(c))){
+            if (!NotAcceptedLetters.notAccepted.contains(String.valueOf(c))){
                 if (currentCount != null) {
                     charMap.put(c, currentCount + 1);
 
