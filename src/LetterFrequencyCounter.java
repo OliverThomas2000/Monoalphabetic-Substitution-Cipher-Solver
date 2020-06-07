@@ -1,22 +1,17 @@
 import java.util.*;
 
-public class LetterFrequencyCounter {
-    Map<Character,Integer> charMap;
+public class LetterFrequencyCounter extends FrequencyCounter {
 
-    LetterFrequencyCounter() {
-        this.charMap = new HashMap<>();
-    }
-
-    void letterCounter(String input) {
+    void counter(String input) {
         for (int index = 0; index < input.length(); index++) {
             char c = input.charAt(index);
-            Integer currentCount = charMap.get(c);
-            if (!NotAcceptedLetters.notAccepted.contains(String.valueOf(c))){
+            Integer currentCount = frequencyMap.get(c);
+            if (!NotAcceptedLetters.notAccepted.contains(String.valueOf(c))) {
                 if (currentCount != null) {
-                    charMap.put(c, currentCount + 1);
+                    frequencyMap.put(c, currentCount + 1);
 
                 } else {
-                    charMap.put(c, 1);
+                    frequencyMap.put(c, 1);
                 }
             }
         }

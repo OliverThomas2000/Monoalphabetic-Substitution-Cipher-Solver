@@ -8,6 +8,6 @@ public class CipherMap {
     }
 
     void addPair(char plaintext, Character cipherText) {
-        this.cipherMap.put(cipherText, plaintext);
+        this.cipherMap.put(plaintext, cipherText);
     }
 }
